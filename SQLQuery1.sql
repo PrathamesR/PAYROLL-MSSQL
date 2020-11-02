@@ -41,6 +41,8 @@ alter table employee_payroll add phoneNo VARCHAR(10) NOT NULL;
 alter table employee_payroll add department VARCHAR(50) NOT NULL DEFAULT('NA');
 alter table employee_payroll add addr VARCHAR(50) DEFAULT(NULL);
 
+alter table employee_payroll alter column phoneNo NUMERIC(10);
+
 alter table employee_payroll drop column addr;
 
 update employee_payroll set addr='Mumbai';
